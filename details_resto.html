@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mauritius Trip Advisor</title>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/swipes.js"></script>
+        <script type="text/javascript" src="js/geolocation.js"></script>
+        <script type="text/javascript" src="js/details_resto.js"></script>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- normal bootstrap -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="themes/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="themes/theme.css"> <!-- theme for main ui-->
+
+        <script>
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <div data-role="page" id="home">
+
+            <!-- header -->
+            <div data-role="header" data-position="fixed" data-fullscreen="true" style="background-color: #0000!important;
+                 border-color: #0000!important;width: 0px;"><a href="#left-panel" class="ui-btn ui-btn-left ui-btn-icon-notext ui-icon-bars ui-nodisc-icon ui-alt-icon"></a></div>
+
+            <div role="main" class="ui-content">
+
+                <div class="search-section">
+                    <div class="search-shadow">
+                        <div class="search-header">
+                            <img src="images/logo.png" alt=" ">
+                            <h3>Details</h3>
+                        </div>
+
+                        <div class="searchbar">
+                            <form action="#" method="post">
+
+                                <input type="submit" value="" />
+                                <div style="overflow: hidden; padding-right: .5em;">
+                                    <input type="text" style="width: 100%;" placeholder="Where to?" required="" />
+                                </div>
+
+                            </form>
+                        </div>  
+
+                    </div>
+                </div>
+
+                <div class="home main-menu col-md-12`">
+
+                    <ul class="flex">
+                        <li class="item-choice flex-item"><a href="hotels.html" rel="external" class="circles ui-link"><i class="fa fa-home" aria-hidden="true"></i></a><h6>Hotels</h6></li>
+                        <li class="item-choice flex-item"><a href="resto.html" rel="external" class="circles ui-link"><i class="fa fa-cutlery" aria-hidden="true"></i></a><h6>Restos</h6></li>
+                        <li class="item-choice flex-item"><a href="attracts.html" rel="external" class="circles ui-link"><i class="fa fa-diamond" aria-hidden="true"></i></a><h6>Interests</h6></li>
+                        <li class="item-choice flex-item"><a href="forex.html" rel="external" class="circles ui-link"><i class="fa fa-money" aria-hidden="true"></i></a><h6>Forex</h6></li> 
+                    </ul>
+                </div>
+
+                <div class="main">
+                    <h1 style="color:darkslategray;" id="category"></h1>
+                    <div class="w3_agile_main_grids">
+                        <div class="w3layouts_main_grid_left">
+
+                            <div class="flexslider">
+
+                                <div class="w3ls_main_grid_left_grid" id="img">
+                                    <img class="details-img" src="" alt=" " />
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="w3_main_grid_right">
+                            <div class="w3l_main_grid_right_grid">
+
+                                <div class="w3_agileits_main_grid_right_info">
+                                    <h2 id="name"></h2>
+                                    <h3 id="summary"></h3>
+                                    <p id="description"></p>
+                                </div>
+                                <div class="agile_occasion_quantity">
+                                    <div class="agile_occasion_quantity_left">
+                                        <p id="rating">Rating: </p>
+                                        <p id="phone">Tel: </p>
+                                        <p>Mail:<a id="email"></a></p>
+                                    </div>
+                                    <div class="agile_occasion_quantity_left">
+                                        <p id="address">Address: </p>
+                                        <p id="checkin" class="fa fa-map-marker">&nbsp Checkins Count: </p>
+                                    </div>
+                                    <div class="clear"> </div>
+
+                                </div>
+
+                                <div class="w3_agile_btn" style="margin-top: 50px!important; margin-bottom: 50px!important; margin: -3px;" id="table-time">
+                                    <div class="table-responsive table-bordered" id="table-time">          
+                                        <table class="table table-hover table-sm" id="table-time">
+                                            <tbody>
+                                                <tr id="table-reservation">
+                                                    <td>Reservations (Required) </td>
+                                                </tr>
+                                                <tr id="table-payment">
+                                                    <td>Payment (Credit Cards)</td>
+                                                </tr>
+                                                 <tr id="table-settings">
+                                                    <td>Seats Settings</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="agile_price_social">
+                                    <div class="agile_price">
+                                        <h4 id="price">Price: </h4>
+                                    </div>
+
+                                    <div class="w3_agile_social">
+                                        <ul>
+                                            <li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
+                                            <li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
+                                            <li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
+                                            <li><a href="#" class="fa fa-whatsapp icon whatsapp"> </a></li>
+                                            <li><a href="#" class="fa fa-skype icon skype"> </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="clear"> </div>
+                                </div>
+
+
+                                <div class="w3_agile_btn">
+                                    <div class="location" id="maps">
+
+                                    </div>
+                                    <div class="favorities">
+                                        <a href="#">Add to Favorites<i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="clear"> </div>
+                                </div>
+
+                                <div class="w3_agile_btn">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="page-header">
+                                                <h1><small class="pull-left" id="num_of_comments"></small></h1>
+                                            </div> 
+                                            <div class="comments-list" id="comments_users" style="margin-top: 40px!important;">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+
+                </div>
+
+                <div data-role="footer" data-theme="b" data-position="fixed" data-fullscreen="true">
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a href="index.html" rel="external" data-icon="home" class="ui-btn-active ui-nodisc-icon" data-iconshadow="true">Home</a></li>
+                            <li><a href="forex.html" rel="external" data-icon="info" class="ui-nodisc-icon" data-iconshadow="true">Forex</a></li>
+                            <li><a href="favourites.html" rel="external" data-icon="heart" class="ui-nodisc-icon" data-iconshadow="true">Favorites</a></li>
+                            <li><a href="user.html" rel="external" data-icon="user" class="ui-nodisc-icon" data-iconshadow="true">Profile</a></li>
+                        </ul>
+                    </div>
+                    <!-- /navbar -->
+                </div>
+                <!-- /footer -->
+
+            </div>
+        </div>
+
+    </body>
+
+</html>

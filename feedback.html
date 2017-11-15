@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mauritius Trip Advisor</title>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/swipes.js"></script>
+        <script type="text/javascript" src="js/home_destinations.js"></script>
+        <script type="text/javascript" src="js/geolocation.js"></script>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- normal bootstrap -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="themes/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="themes/theme.css"> <!-- theme for main ui-->
+
+        <script>
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <div data-role="page" id="home">
+
+            <!-- header -->
+             <div data-role="header" data-position="fixed" data-fullscreen="true" style="background-color: #0000!important;
+                 border-color: #0000!important;width: 0px;"><a href="#left-panel" class="ui-btn ui-btn-left ui-btn-icon-notext ui-icon-bars ui-nodisc-icon ui-alt-icon"></a></div>
+
+            <div role="main" class="ui-content">
+
+                <div class="about">
+
+                    <h3>About Us</h3>
+                    <label class="line"></label>
+                    <img src="images/index.png" alt=" " />
+                    <p>Mauritius Trip Advisor, is a mauritian travel app, that enables tourists to unleash their full potential of visiting popular attractions in Mauritius.With over 4.5 million reviews and opinions worldwide on popular listings on the island.
+
+                    </p>
+
+                </div>
+
+                <!--skills-->
+                <div class="skills">
+                    <div class="container">
+                        <h3>Why use Mauritius Trip Advisor</h3>
+                        <label class="line"></label>
+                        <div class="col-md-6 skills-left">
+
+                            <p>The app covers a wide range of: attractions, beaches, hotels, restaurants, parks, etc.            
+                            </p>
+                            <p>The app is easy to use and incorporates a currency converter, weather forcast, emergency numberrs such as (police stations,fire brigade,ambulance) and more.</p>     
+                        </div>
+                        <div class="col-md-6 skills-right">
+                            <div class="bar_group">
+                                <div class='bar_group__bar thin' label='Customer Satisfaction' show_values='true' tooltip='true' value='99.9' style="margin-bottom: 40px; width: 100%;"></div>
+
+                            </div>
+                            <script src="js/bars.js"></script>
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+   
+                </div>
+                <div class="contact">
+                    <div class="container">
+                        <h3>Contact</h3>
+                        <label class="line"></label>
+                        <div class="col-md-4 c-w3l">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <h4>35,Cyber City</h4>
+                            <h4>Ebene,Mauritius</h4>
+                        </div>
+                        <div class="col-md-4 c-w3l c-mail">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <h4><a href="#" class="col-md-4">admin@mta.mu</a></h4>
+
+                        </div>
+                        <div class="col-md-4 c-w3l c-phn">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <h4>427 0000</h4>
+                            <h4>413 0000</h4>
+                        </div>
+                        <div class="clearfix"></div>
+                        <form action="#" method="post" class="form-about">
+                            <input type="text" name="name" class="name" placeholder="Your Name" required="">
+                            <input type="text" name="email" class="email" placeholder="Your Email" required="">
+                            <textarea  name="your message" placeholder="Your Message"  required="" class="textarea"></textarea>
+                            <input type="submit" value="Send Message" class="btn-sub-about">
+                        </form>
+                    </div>
+                </div>
+
+
+                <div data-role="footer" data-theme="b" data-position="fixed" data-fullscreen="true">
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a href="index.html" rel="external" data-icon="home" class="ui-btn-active ui-nodisc-icon" data-iconshadow="true">Home</a></li>
+                            <li><a href="forex.html" rel="external" data-icon="info" class="ui-nodisc-icon" data-iconshadow="true">Forex</a></li>
+                            <li><a href="favourites.html" rel="external" data-icon="heart" class="ui-nodisc-icon" data-iconshadow="true">Favorites</a></li>
+                            <li><a href="user.html" rel="external" data-icon="user" class="ui-nodisc-icon" data-iconshadow="true">Profile</a></li>
+                        </ul>
+                    </div>
+                    <!-- /navbar -->
+                </div>
+                <!-- /footer -->
+
+            </div>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mauritius Trip Advisor</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/swipes.js"></script>
+    <script type="text/javascript" src="js/database.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- normal bootstrap -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="themes/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="themes/theme.css">
+    <!-- theme for main ui-->
+
+    <script>
+        $(document).ready(function() // Call function when page is ready for load..
+            {
+                initDatabase();
+                $("#submitButton").click(insertRecord);
+            });
+    </script>
+
+
+</head>
+
+<body>
+
+    <div data-role="page" id="home">
+
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-fullscreen="true" style="background-color: #e9e9e900!important;
+                 border-color: #ddd0!important;"><a href="#left-panel" class="ui-btn ui-btn-left ui-btn-icon-notext ui-icon-bars ui-nodisc-icon ui-alt-icon"></a>
+        </div>
+
+        <div role="main" class="ui-content">
+
+            <div class="home">
+                <form action="register.html">
+                <h2>Registration Form</h2>
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" name="fullname" placeholder="Full Name" id="fullname" pattern="[A-Za-z ]{1,30}" title="Characters Allowed Only" class="required" minlength="5">
+
+                <label for="email">Email:</label>
+                <input type="text" name="email" placeholder="example@gmail.com" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Enter Email Address" class="required email" minlength="5">
+
+                <label for="username">Username:</label>
+                <input type="text" name="username" placeholder="exmple005" id="username" pattern="[A-Za-z0-9 ]{1,30}" title="Characters and Numbers Allowed Only" class="required" minlength="5">
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" pattern="[A-Za-z0-9]{1,30}" title="Characters and Numbers Allowed Only" class="required" minlength="5">
+
+                <label for="cpassword">Confirm Password:</label>
+                <input type="password" name="cpassword" id="cpassword" pattern="[A-Za-z0-9]{1,30}" title="Characters and Numbers Allowed Only" class="required" minlength="5">
+
+                <br/>
+
+                <label for="selectCountry" class="ui-hidden-accessible">Country select:</label>
+                <select name="selectCountry" id="selectCountry" data-mini="true" class="required">
+                        <option value="" selected>Select Country</option>
+                        <option value="Mauritius">Mauritius</option>
+                        <option value="Rodrigues">Rodrigues</option>
+                </select>
+
+                <br/>
+
+                <label for="submitButton" class="ui-hidden-accessible">Register:</label>
+                <button data-theme="b" class="ui-shadow ui-btn ui-corner-all" id="submitButton" type="submit">Register</button>
+                <br/>
+                </form>
+                
+                <a href="login.html" style="text-decoration: none;">
+                    <div style="font-size: 10px; text-align: center; text-decoration: none;">
+                        already has an account? <br/>Log in here
+                    </div>
+                </a>
+
+                <br/>
+                <br/>
+                <br/>
+            </div>
+
+            <div data-role="footer" data-theme="b" data-position="fixed" data-fullscreen="true">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index.html" data-icon="home" class="ui-btn-active ui-nodisc-icon" data-iconshadow="true">Home</a></li>
+                        <li><a href="favourites.html" data-icon="heart" class="ui-nodisc-icon" data-iconshadow="true">Favorites</a></li>
+                        <li><a href="notif.html" data-icon="alert" class="ui-nodisc-icon" data-iconshadow="true">Alert</a></li>
+                        <li><a href="user.html" data-icon="user" class="ui-nodisc-icon" data-iconshadow="true">Profile</a></li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+            </div>
+            <!-- /footer -->
+
+        </div>
+    </div>
+
+</body>
+
+</html>
